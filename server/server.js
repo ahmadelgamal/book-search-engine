@@ -13,7 +13,7 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  // context: authMiddleware
+  context: authMiddleware
 });
 
 // integrate our Apollo server with the Express application as middleware
