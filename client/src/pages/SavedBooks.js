@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 
 import { useQuery } from '@apollo/react-hooks';
-import { QUERY_ME } from '../utils/queries';
+import { GET_ME } from '../utils/queries';
 
 import { getMe, deleteBook } from '../utils/API';
 import Auth from '../utils/auth';
@@ -10,7 +10,7 @@ import { removeBookId } from '../utils/localStorage';
 import { ObservableQuery } from 'apollo-boost';
 
 const SavedBooks = () => {
-  const { loading, data } = useQuery(QUERY_ME);
+  const { loading, data } = useQuery(GET_ME);
   const me = data?.me || [];
   // console.log(me);
 
