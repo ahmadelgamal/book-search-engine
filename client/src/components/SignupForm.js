@@ -25,17 +25,17 @@ const SignupForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-      // use try/catch instead of promises to handle errors
-  try {
-    // execute addUser mutation and pass in variable data from form
-    const { data } = await addUser({
-      variables: { ...userFormData }
-    });
-    // console.log(data);
-    Auth.login(data.addUser.token);
-  } catch (e) {
-    console.error(e);
-  }
+    // use try/catch instead of promises to handle errors
+    try {
+      // execute addUser mutation and pass in variable data from form
+      const { data } = await addUser({
+        variables: { ...userFormData }
+      });
+      // console.log(data);
+      Auth.login(data.addUser.token);
+    } catch (e) {
+      console.error(e);
+    }
 
     // // check if form has everything (as per react-bootstrap docs)
     // const form = event.currentTarget;
@@ -68,10 +68,10 @@ const SignupForm = () => {
 
   return (
     <>
-      {/* This is needed for the validation functionality above */}
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
-        {/* show alert if server response is bad */}
-        <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
+      {/* This is needed for the validation functionality above */ }
+      <Form noValidate validated={ validated } onSubmit={ handleFormSubmit }>
+        {/* show alert if server response is bad */ }
+        <Alert dismissible onClose={ () => setShowAlert(false) } show={ showAlert } variant='danger'>
           Something went wrong with your signup!
         </Alert>
 
@@ -81,9 +81,9 @@ const SignupForm = () => {
             type='text'
             placeholder='Your username'
             name='username'
-            // autoComplete='username'
-            onChange={handleInputChange}
-            value={userFormData.username}
+            autoComplete='username'
+            onChange={ handleInputChange }
+            value={ userFormData.username }
             required
           />
           <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
@@ -95,9 +95,9 @@ const SignupForm = () => {
             type='email'
             placeholder='Your email address'
             name='email'
-            // autoComplete='email'
-            onChange={handleInputChange}
-            value={userFormData.email}
+            autoComplete='email'
+            onChange={ handleInputChange }
+            value={ userFormData.email }
             required
           />
           <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
@@ -110,20 +110,20 @@ const SignupForm = () => {
             placeholder='Your password'
             name='password'
             autoComplete='new-password'
-            onChange={handleInputChange}
-            value={userFormData.password}
+            onChange={ handleInputChange }
+            value={ userFormData.password }
             required
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
         <Button
-          disabled={!(userFormData.username && userFormData.email && userFormData.password)}
+          disabled={ !(userFormData.username && userFormData.email && userFormData.password) }
           type='submit'
           variant='success'>
           Submit
         </Button>
       </Form>
-      {error && <div>Sign up failed</div>}
+      {error && <div>Sign up failed</div> }
     </>
   );
 };

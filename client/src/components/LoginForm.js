@@ -29,7 +29,7 @@ const LoginForm = () => {
       });
   
       // console.log(data);
-      Auth.login(data.addUser.token);
+      Auth.login(data.login.token);
     } catch (e) {
       console.error(e);
     }
@@ -75,7 +75,7 @@ const LoginForm = () => {
             type='text'
             placeholder='Your email'
             name='email'
-            // autoComplete='email'
+            autoComplete='email'
             onChange={handleInputChange}
             value={userFormData.email}
             required
