@@ -12,7 +12,7 @@ import { ObservableQuery } from 'apollo-boost';
 const SavedBooks = () => {
   const { loading, data } = useQuery(QUERY_ME);
   const me = data?.me || [];
-  console.log(me);
+  // console.log(me);
 
   const [userData, setUserData] = useState({});
 
