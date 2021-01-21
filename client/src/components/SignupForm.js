@@ -80,7 +80,7 @@ const SignupForm = () => {
             type='text'
             placeholder='Your username'
             name='username'
-            autoComplete='username'
+            // autoComplete='username'
             onChange={handleInputChange}
             value={userFormData.username}
             required
@@ -94,7 +94,7 @@ const SignupForm = () => {
             type='email'
             placeholder='Your email address'
             name='email'
-            autoComplete='email'
+            // autoComplete='email'
             onChange={handleInputChange}
             value={userFormData.email}
             required
