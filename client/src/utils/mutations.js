@@ -22,13 +22,13 @@ export const LOGIN_USER = gql`
 `;
 
 export const SAVE_BOOK = gql`
-  mutation saveBook($favorite: BookInput!) {
-    saveBook(favorite: $favorite) {
+  mutation saveBook($bookData: BookInput!) {
+    saveBook(bookData: $bookData) {
       _id
       username
       email
       bookCount
-      saveBooks {
+      savedBooks {
         bookId
         authors
         description
