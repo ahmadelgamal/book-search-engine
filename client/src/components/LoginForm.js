@@ -59,6 +59,7 @@ const LoginForm = () => {
             type='text'
             placeholder='Your email'
             name='email'
+            autoComplete='email'
             onChange={handleInputChange}
             value={userFormData.email}
             required
@@ -72,6 +73,7 @@ const LoginForm = () => {
             type='password'
             placeholder='Your password'
             name='password'
+            autoComplete='current-password'
             onChange={handleInputChange}
             value={userFormData.password}
             required
