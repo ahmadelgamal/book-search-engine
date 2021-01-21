@@ -18,7 +18,7 @@
 
 ![GitHub version](https://img.shields.io/github/package-json/v/ahmadelgamal/book-search-engine?color=red&style=plastic)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://opensource.org/licenses/ISC)
 
 ## Description
 
