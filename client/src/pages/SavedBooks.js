@@ -19,6 +19,17 @@ const SavedBooks = () => {
   // use this to determine if `useEffect()` hook needs to run again
   const userDataLength = Object.keys(userData).length;
 
+  // try {
+  //   const { data } = await login({
+  //     variables: { ...userFormData }
+  //   });
+
+  //   // console.log(data);
+  //   Auth.login(data.login.token);
+  // } catch (e) {
+  //   console.error(e);
+  // }
+
   useEffect(() => {
     const getUserData = async () => {
       try {
