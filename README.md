@@ -56,13 +56,22 @@ It was built using the MERN stack, with a React front end, MongoDB database, and
 
 ## Installation
 
-1. In the root directory of the app:
-   1. Run `npm i`.
-   1. Run `npm start`.
+1. In the root directory of the app run `npm i`.
 
 ## Usage
 
-1.
+1. Navigate to the command line in the root directory of the app.
+1. Run `npm start`.
+1. This should launch a browser at the following address: http://localhost:3000/
+1. Click on `Login/Sign Up`.
+1. Click on `Sign Up`.
+1. Fill out your username, email and password.
+1. Click `Submit`.
+1. Type a search phrase or word in the `Search for a book` field.
+1. Once the results appear, browse them and click `Save this Book!` for the books that you wish to add to the `See Your Books` list.
+1. To view the saved list, click on `See Your Books` in the navigation bar.
+1. To logout, click on `Logout` in the navigation bar.
+1. Next time you login you do not need to Sign Up again. Instead you can just login.
 
 ### Screenshot / Gif Animation
 
